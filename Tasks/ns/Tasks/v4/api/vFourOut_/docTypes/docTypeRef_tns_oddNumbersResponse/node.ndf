@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Values version="2.0">
+  <record name="record" javaclass="com.wm.util.Values">
+    <value name="node_type">record</value>
+    <value name="node_subtype">unknown</value>
+    <value name="node_nsName">Tasks.v4.api.vFourOut_.docTypes:docTypeRef_tns_oddNumbersResponse</value>
+    <value name="node_pkg">Tasks</value>
+    <value name="is_public">false</value>
+    <value name="field_type">record</value>
+    <value name="field_dim">0</value>
+    <value name="nillable">true</value>
+    <value name="form_qualified">false</value>
+    <value name="is_global">false</value>
+    <value name="schemaDomain">0d1813c930344cfb974c3a0f14ab6250</value>
+    <value name="docTypeDomain">64df63009f4c4e479c61e591bad24218</value>
+    <value name="originURI">http://LAPTOP-SSGOMGS4:5555/ws/Tasks.v4.api:vFourApi?WSDL</value>
+    <array name="rec_fields" type="record" depth="1">
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="node_subtype">unknown</value>
+        <value name="is_public">false</value>
+        <value name="field_name">oddNumbers</value>
+        <value name="field_type">string</value>
+        <value name="field_dim">1</value>
+        <record name="field_content_type" javaclass="com.wm.util.Values">
+          <value name="contentType">1</value>
+          <value name="internalType">reference</value>
+          <value name="dataTypeVersion">dtVersion2</value>
+          <array name="targetNames" type="record" depth="1">
+            <record javaclass="com.wm.util.Values">
+              <value name="xmlns">http://www.w3.org/2001/XMLSchema</value>
+              <value name="ncName">string</value>
+            </record>
+          </array>
+        </record>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+        <value name="is_soap_array_encoding_used">false</value>
+      </record>
+    </array>
+    <record name="schemaType" javaclass="com.wm.util.Values">
+      <value name="xmlns">http://LAPTOP-SSGOMGS4/Tasks.v4.api:vFourApi</value>
+      <value name="ncName">oddNumbersResponse</value>
+    </record>
+    <value name="schemaRegistered">true</value>
+    <value name="modifiable">false</value>
+    <value name="parentWsd">Tasks.v4.api:vFourOut</value>
+  </record>
+</Values>

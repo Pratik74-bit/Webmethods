@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions name="vFourApi" targetNamespace="http://LAPTOP-SSGOMGS4/Tasks.v4.api:vFourApi" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:soapjms="http://www.w3.org/2010/soapjms/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://LAPTOP-SSGOMGS4/Tasks.v4.api:vFourApi" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://LAPTOP-SSGOMGS4/Tasks.v4.api:vFourApi" xmlns:tns="http://LAPTOP-SSGOMGS4/Tasks.v4.api:vFourApi" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+          <xsd:element name="addElementsInDoc" type="tns:addElementsInDoc"/>
+          <xsd:element name="addElementsInDocResponse" type="tns:addElementsInDocResponse"/>
+          <xsd:element name="addElementsInList" type="tns:addElementsInList"/>
+          <xsd:element name="addElementsInListResponse" type="tns:addElementsInListResponse"/>
+          <xsd:element name="evenNumbers" type="tns:evenNumbers"/>
+          <xsd:element name="evenNumbersResponse" type="tns:evenNumbersResponse"/>
+          <xsd:element name="oddNumbers" type="tns:oddNumbers"/>
+          <xsd:element name="oddNumbersResponse" type="tns:oddNumbersResponse"/>
+          <xsd:complexType name="addElementsInDoc">
+            <xsd:sequence>
+              <xsd:element maxOccurs="unbounded" name="input" nillable="true" type="tns:input"/>
+            </xsd:sequence>
+          </xsd:complexType>
+          <xsd:complexType name="input">
+            <xsd:sequence>
+              <xsd:element name="in1" nillable="true" type="xsd:string"/>
+              <xsd:element name="in2" nillable="true" type="xsd:string"/>
+            </xsd:sequence>
+          </xsd:complexType>
+          <xsd:complexType name="addElementsInDocResponse">
+            <xsd:sequence>
+              <xsd:element maxOccurs="unbounded" name="result" nillable="true" type="xsd:string"/>
+            </xsd:sequence>
+          </xsd:complexType>
+          <xsd:complexType name="addElementsInList">
+            <xsd:sequence>
+              <xsd:element maxOccurs="unbounded" name="inputs" nillable="true" type="xsd:string"/>
+            </xsd:sequence>
+          </xsd:complexType>
+          <xsd:complexType name="addElementsInListResponse">
+            <xsd:sequence>
+              <xsd:element name="output" nillable="true" type="xsd:string"/>
+            </xsd:sequence>
+          </xsd:complexType>
+          <xsd:complexType name="evenNumbers">
+            <xsd:sequence>
+              <xsd:element name="range" nillable="true" type="xsd:string"/>
+            </xsd:sequence>
+          </xsd:complexType>
+          <xsd:complexType name="evenNumbersResponse">
+            <xsd:sequence>
+              <xsd:element maxOccurs="unbounded" name="evenNumbers" nillable="true" type="xsd:string"/>
+            </xsd:sequence>
+          </xsd:complexType>
+          <xsd:complexType name="oddNumbers">
+            <xsd:sequence>
+              <xsd:element name="range" nillable="true" type="xsd:string"/>
+            </xsd:sequence>
+          </xsd:complexType>
+          <xsd:complexType name="oddNumbersResponse">
+            <xsd:sequence>
+              <xsd:element maxOccurs="unbounded" name="oddNumbers" nillable="true" type="xsd:string"/>
+            </xsd:sequence>
+          </xsd:complexType>
+        	</xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="vFourApi_PortType_evenNumbersResponse">
+    <wsdl:part name="parameters" element="tns:evenNumbersResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="vFourApi_PortType_addElementsInDocResponse">
+    <wsdl:part name="parameters" element="tns:addElementsInDocResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="vFourApi_PortType_oddNumbersResponse">
+    <wsdl:part name="parameters" element="tns:oddNumbersResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="vFourApi_PortType_addElementsInList">
+    <wsdl:part name="parameters" element="tns:addElementsInList">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="vFourApi_PortType_addElementsInDoc">
+    <wsdl:part name="parameters" element="tns:addElementsInDoc">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="vFourApi_PortType_oddNumbers">
+    <wsdl:part name="parameters" element="tns:oddNumbers">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="vFourApi_PortType_evenNumbers">
+    <wsdl:part name="parameters" element="tns:evenNumbers">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="vFourApi_PortType_addElementsInListResponse">
+    <wsdl:part name="parameters" element="tns:addElementsInListResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="vFourApi_PortType">
+    <wsdl:operation name="oddNumbers">
+      <wsdl:input message="tns:vFourApi_PortType_oddNumbers">
+    </wsdl:input>
+      <wsdl:output message="tns:vFourApi_PortType_oddNumbersResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="addElementsInDoc">
+      <wsdl:input message="tns:vFourApi_PortType_addElementsInDoc">
+    </wsdl:input>
+      <wsdl:output message="tns:vFourApi_PortType_addElementsInDocResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="addElementsInList">
+      <wsdl:input message="tns:vFourApi_PortType_addElementsInList">
+    </wsdl:input>
+      <wsdl:output message="tns:vFourApi_PortType_addElementsInListResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="evenNumbers">
+      <wsdl:input message="tns:vFourApi_PortType_evenNumbers">
+    </wsdl:input>
+      <wsdl:output message="tns:vFourApi_PortType_evenNumbersResponse">
+    </wsdl:output>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="Tasks_v4_api_vFourApi_Binder" type="tns:vFourApi_PortType">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="oddNumbers">
+      <soap:operation soapAction="Tasks_v4_api_vFourApi_Binder_oddNumbers" style="document"/>
+      <wsdl:input>
+        <soap:body parts="parameters" use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body parts="parameters" use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="addElementsInDoc">
+      <soap:operation soapAction="Tasks_v4_api_vFourApi_Binder_addElementsInDoc" style="document"/>
+      <wsdl:input>
+        <soap:body parts="parameters" use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body parts="parameters" use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="addElementsInList">
+      <soap:operation soapAction="Tasks_v4_api_vFourApi_Binder_addElementsInList" style="document"/>
+      <wsdl:input>
+        <soap:body parts="parameters" use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body parts="parameters" use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="evenNumbers">
+      <soap:operation soapAction="Tasks_v4_api_vFourApi_Binder_evenNumbers" style="document"/>
+      <wsdl:input>
+        <soap:body parts="parameters" use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body parts="parameters" use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Tasks.v4.api.vFourApi">
+    <wsdl:port name="Tasks_v4_api_vFourApi_Port" binding="tns:Tasks_v4_api_vFourApi_Binder">
+      <soap:address location="http://LAPTOP-SSGOMGS4:5555/ws/Tasks.v4.api:vFourApi/Tasks_v4_api_vFourApi_Port"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

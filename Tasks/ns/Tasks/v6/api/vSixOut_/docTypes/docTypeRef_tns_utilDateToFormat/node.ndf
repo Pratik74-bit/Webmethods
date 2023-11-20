@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Values version="2.0">
+  <record name="record" javaclass="com.wm.util.Values">
+    <value name="node_type">record</value>
+    <value name="node_subtype">unknown</value>
+    <value name="node_nsName">Tasks.v6.api.vSixOut_.docTypes:docTypeRef_tns_utilDateToFormat</value>
+    <value name="node_pkg">Tasks</value>
+    <value name="is_public">false</value>
+    <value name="field_type">record</value>
+    <value name="field_dim">0</value>
+    <value name="nillable">true</value>
+    <value name="form_qualified">false</value>
+    <value name="is_global">false</value>
+    <value name="schemaDomain">826cadd6a3b24e76a8af1aa8810cede5</value>
+    <value name="docTypeDomain">0cd92519f8cc4520aebf432ba7c35e37</value>
+    <value name="originURI">http://LAPTOP-SSGOMGS4:5555/ws/Tasks.v6.api:vSixApi?WSDL</value>
+    <array name="rec_fields" type="record" depth="1">
+    </array>
+    <record name="schemaType" javaclass="com.wm.util.Values">
+      <value name="xmlns">http://LAPTOP-SSGOMGS4/Tasks.v6.api:vSixApi</value>
+      <value name="ncName">utilDateToFormat</value>
+    </record>
+    <value name="schemaRegistered">true</value>
+    <value name="modifiable">false</value>
+    <value name="parentWsd">Tasks.v6.api:vSixOut</value>
+  </record>
+</Values>

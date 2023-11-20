@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions name="vSixApi" targetNamespace="http://LAPTOP-SSGOMGS4/Tasks.v6.api:vSixApi" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:soapjms="http://www.w3.org/2010/soapjms/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://LAPTOP-SSGOMGS4/Tasks.v6.api:vSixApi" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://LAPTOP-SSGOMGS4/Tasks.v6.api:vSixApi" xmlns:tns="http://LAPTOP-SSGOMGS4/Tasks.v6.api:vSixApi" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+          <xsd:element name="compareDates" type="tns:compareDates"/>
+          <xsd:element name="compareDatesResponse" type="tns:compareDatesResponse"/>
+          <xsd:element name="currentDateTime" type="tns:currentDateTime"/>
+          <xsd:element name="currentDateTimeResponse" type="tns:currentDateTimeResponse"/>
+          <xsd:element name="dateDifference" type="tns:dateDifference"/>
+          <xsd:element name="dateFormatChange" type="tns:dateFormatChange"/>
+          <xsd:element name="dateFormatChangeResponse" type="tns:dateFormatChangeResponse"/>
+          <xsd:element name="utilDateToFormat" type="tns:utilDateToFormat"/>
+          <xsd:element name="utilDateToFormatResponse" type="tns:utilDateToFormatResponse"/>
+          <xsd:element name="workingDays" type="tns:workingDays"/>
+          <xsd:element name="workingDaysResponse" type="tns:workingDaysResponse"/>
+          <xsd:complexType name="compareDates">
+            <xsd:sequence>
+              <xsd:element name="date1" nillable="true" type="xsd:string"/>
+              <xsd:element name="date2" nillable="true" type="xsd:string"/>
+            </xsd:sequence>
+          </xsd:complexType>
+          <xsd:complexType name="compareDatesResponse">
+            <xsd:sequence>
+              <xsd:element name="dateLabel" nillable="true" type="xsd:string"/>
+            </xsd:sequence>
+          </xsd:complexType>
+          <xsd:complexType name="currentDateTime">
+            <xsd:sequence>
+            </xsd:sequence>
+          </xsd:complexType>
+          <xsd:complexType name="currentDateTimeResponse">
+            <xsd:sequence>
+              <xsd:element name="currentDateTime" nillable="true" type="xsd:string"/>
+              <xsd:element name="utilDate" nillable="true" type="xsd:dateTime"/>
+            </xsd:sequence>
+          </xsd:complexType>
+          <xsd:complexType name="dateDifference">
+            <xsd:sequence>
+              <xsd:element name="startDate" nillable="true" type="xsd:string"/>
+              <xsd:element name="endDate" nillable="true" type="xsd:string"/>
+              <xsd:element name="spattern" nillable="true" type="xsd:string"/>
+              <xsd:element name="epattern" nillable="true" type="xsd:string"/>
+            </xsd:sequence>
+          </xsd:complexType>
+          <xsd:complexType name="dateFormatChange">
+            <xsd:sequence>
+              <xsd:element name="date1" nillable="true" type="xsd:string"/>
+              <xsd:element name="datePattern" nillable="true" type="xsd:string"/>
+            </xsd:sequence>
+          </xsd:complexType>
+          <xsd:complexType name="dateFormatChangeResponse">
+            <xsd:sequence>
+              <xsd:element name="resultDate" nillable="true" type="xsd:string"/>
+            </xsd:sequence>
+          </xsd:complexType>
+          <xsd:complexType name="utilDateToFormat">
+            <xsd:sequence>
+            </xsd:sequence>
+          </xsd:complexType>
+          <xsd:complexType name="utilDateToFormatResponse">
+            <xsd:sequence>
+              <xsd:element name="convertedFormatDate" nillable="true" type="xsd:string"/>
+              <xsd:element name="utilDate" nillable="true" type="xsd:dateTime"/>
+            </xsd:sequence>
+          </xsd:complexType>
+          <xsd:complexType name="workingDays">
+            <xsd:sequence>
+              <xsd:element name="date1" nillable="true" type="xsd:string"/>
+              <xsd:element name="date2" nillable="true" type="xsd:string"/>
+            </xsd:sequence>
+          </xsd:complexType>
+          <xsd:complexType name="workingDaysResponse">
+            <xsd:sequence>
+              <xsd:element name="workingDays" nillable="true" type="xsd:string"/>
+            </xsd:sequence>
+          </xsd:complexType>
+        	</xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="vSixApi_PortType_currentDateTime">
+    <wsdl:part name="parameters" element="tns:currentDateTime">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="vSixApi_PortType_compareDatesResponse">
+    <wsdl:part name="parameters" element="tns:compareDatesResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="vSixApi_PortType_dateDifference">
+    <wsdl:part name="parameters" element="tns:dateDifference">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="vSixApi_PortType_utilDateToFormat">
+    <wsdl:part name="parameters" element="tns:utilDateToFormat">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="vSixApi_PortType_dateFormatChange">
+    <wsdl:part name="parameters" element="tns:dateFormatChange">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="vSixApi_PortType_workingDays">
+    <wsdl:part name="parameters" element="tns:workingDays">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="vSixApi_PortType_utilDateToFormatResponse">
+    <wsdl:part name="parameters" element="tns:utilDateToFormatResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="vSixApi_PortType_compareDates">
+    <wsdl:part name="parameters" element="tns:compareDates">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="vSixApi_PortType_currentDateTimeResponse">
+    <wsdl:part name="parameters" element="tns:currentDateTimeResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="vSixApi_PortType_dateFormatChangeResponse">
+    <wsdl:part name="parameters" element="tns:dateFormatChangeResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="vSixApi_PortType_workingDaysResponse">
+    <wsdl:part name="parameters" element="tns:workingDaysResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="vSixApi_PortType">
+    <wsdl:operation name="dateFormatChange">
+      <wsdl:input message="tns:vSixApi_PortType_dateFormatChange">
+    </wsdl:input>
+      <wsdl:output message="tns:vSixApi_PortType_dateFormatChangeResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="utilDateToFormat">
+      <wsdl:input message="tns:vSixApi_PortType_utilDateToFormat">
+    </wsdl:input>
+      <wsdl:output message="tns:vSixApi_PortType_utilDateToFormatResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="dateDifference">
+      <wsdl:input message="tns:vSixApi_PortType_dateDifference">
+    </wsdl:input>
+    </wsdl:operation>
+    <wsdl:operation name="compareDates">
+      <wsdl:input message="tns:vSixApi_PortType_compareDates">
+    </wsdl:input>
+      <wsdl:output message="tns:vSixApi_PortType_compareDatesResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="workingDays">
+      <wsdl:input message="tns:vSixApi_PortType_workingDays">
+    </wsdl:input>
+      <wsdl:output message="tns:vSixApi_PortType_workingDaysResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="currentDateTime">
+      <wsdl:input message="tns:vSixApi_PortType_currentDateTime">
+    </wsdl:input>
+      <wsdl:output message="tns:vSixApi_PortType_currentDateTimeResponse">
+    </wsdl:output>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="Tasks_v6_api_vSixApi_Binder" type="tns:vSixApi_PortType">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="dateFormatChange">
+      <soap:operation soapAction="Tasks_v6_api_vSixApi_Binder_dateFormatChange" style="document"/>
+      <wsdl:input>
+        <soap:body parts="parameters" use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body parts="parameters" use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="utilDateToFormat">
+      <soap:operation soapAction="Tasks_v6_api_vSixApi_Binder_utilDateToFormat" style="document"/>
+      <wsdl:input>
+        <soap:body parts="parameters" use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body parts="parameters" use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="dateDifference">
+      <soap:operation soapAction="Tasks_v6_api_vSixApi_Binder_dateDifference" style="document"/>
+      <wsdl:input>
+        <soap:body parts="parameters" use="literal"/>
+      </wsdl:input>
+    </wsdl:operation>
+    <wsdl:operation name="compareDates">
+      <soap:operation soapAction="Tasks_v6_api_vSixApi_Binder_compareDates" style="document"/>
+      <wsdl:input>
+        <soap:body parts="parameters" use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body parts="parameters" use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="workingDays">
+      <soap:operation soapAction="Tasks_v6_api_vSixApi_Binder_workingDays" style="document"/>
+      <wsdl:input>
+        <soap:body parts="parameters" use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body parts="parameters" use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="currentDateTime">
+      <soap:operation soapAction="Tasks_v6_api_vSixApi_Binder_currentDateTime" style="document"/>
+      <wsdl:input>
+        <soap:body parts="parameters" use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body parts="parameters" use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Tasks.v6.api.vSixApi">
+    <wsdl:port name="Tasks_v6_api_vSixApi_Port" binding="tns:Tasks_v6_api_vSixApi_Binder">
+      <soap:address location="http://LAPTOP-SSGOMGS4:5555/ws/Tasks.v6.api:vSixApi/Tasks_v6_api_vSixApi_Port"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

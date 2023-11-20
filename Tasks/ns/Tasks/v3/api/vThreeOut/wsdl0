@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions name="vThreeApi" targetNamespace="http://LAPTOP-SSGOMGS4/Tasks.v3.api:vThreeApi" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:soapjms="http://www.w3.org/2010/soapjms/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://LAPTOP-SSGOMGS4/Tasks.v3.api:vThreeApi" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://LAPTOP-SSGOMGS4/Tasks.v3.api:vThreeApi" xmlns:tns="http://LAPTOP-SSGOMGS4/Tasks.v3.api:vThreeApi" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+          <xsd:element name="branchOperation" type="tns:branchOperation"/>
+          <xsd:element name="branchOperationResponse" type="tns:branchOperationResponse"/>
+          <xsd:element name="concatWithLoop" type="tns:concatWithLoop"/>
+          <xsd:element name="concatWithLoopResponse" type="tns:concatWithLoopResponse"/>
+          <xsd:complexType name="branchOperation">
+            <xsd:sequence>
+              <xsd:element name="in1" nillable="true" type="xsd:string"/>
+              <xsd:element name="in2" nillable="true" type="xsd:string"/>
+              <xsd:element name="operation" nillable="true" type="xsd:string"/>
+            </xsd:sequence>
+          </xsd:complexType>
+          <xsd:complexType name="branchOperationResponse">
+            <xsd:sequence>
+              <xsd:element name="result" nillable="true" type="xsd:string"/>
+            </xsd:sequence>
+          </xsd:complexType>
+          <xsd:complexType name="concatWithLoop">
+            <xsd:sequence>
+              <xsd:element maxOccurs="unbounded" name="names" nillable="true" type="tns:s1_s1_inputs"/>
+            </xsd:sequence>
+          </xsd:complexType>
+          <xsd:complexType name="s1_s1_inputs">
+            <xsd:sequence>
+              <xsd:element name="FirstName" nillable="true" type="xsd:string"/>
+              <xsd:element name="LastName" nillable="true" type="xsd:string"/>
+            </xsd:sequence>
+          </xsd:complexType>
+          <xsd:complexType name="concatWithLoopResponse">
+            <xsd:sequence>
+              <xsd:element maxOccurs="unbounded" name="FullNames" nillable="true" type="xsd:string"/>
+            </xsd:sequence>
+          </xsd:complexType>
+        	</xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="vThreeApi_PortType_branchOperationResponse">
+    <wsdl:part name="parameters" element="tns:branchOperationResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="vThreeApi_PortType_concatWithLoopResponse">
+    <wsdl:part name="parameters" element="tns:concatWithLoopResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="vThreeApi_PortType_branchOperation">
+    <wsdl:part name="parameters" element="tns:branchOperation">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="vThreeApi_PortType_concatWithLoop">
+    <wsdl:part name="parameters" element="tns:concatWithLoop">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="vThreeApi_PortType">
+    <wsdl:operation name="concatWithLoop">
+      <wsdl:input message="tns:vThreeApi_PortType_concatWithLoop">
+    </wsdl:input>
+      <wsdl:output message="tns:vThreeApi_PortType_concatWithLoopResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="branchOperation">
+      <wsdl:input message="tns:vThreeApi_PortType_branchOperation">
+    </wsdl:input>
+      <wsdl:output message="tns:vThreeApi_PortType_branchOperationResponse">
+    </wsdl:output>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="Tasks_v3_api_vThreeApi_Binder" type="tns:vThreeApi_PortType">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="concatWithLoop">
+      <soap:operation soapAction="Tasks_v3_api_vThreeApi_Binder_concatWithLoop" style="document"/>
+      <wsdl:input>
+        <soap:body parts="parameters" use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body parts="parameters" use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="branchOperation">
+      <soap:operation soapAction="Tasks_v3_api_vThreeApi_Binder_branchOperation" style="document"/>
+      <wsdl:input>
+        <soap:body parts="parameters" use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body parts="parameters" use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Tasks.v3.api.vThreeApi">
+    <wsdl:port name="Tasks_v3_api_vThreeApi_Port" binding="tns:Tasks_v3_api_vThreeApi_Binder">
+      <soap:address location="http://LAPTOP-SSGOMGS4:5555/ws/Tasks.v3.api:vThreeApi/Tasks_v3_api_vThreeApi_Port"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

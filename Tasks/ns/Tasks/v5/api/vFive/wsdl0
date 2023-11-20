@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions name="vFiveApi" targetNamespace="http://LAPTOP-SSGOMGS4/Tasks.v5.api:vFiveApi" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:soapjms="http://www.w3.org/2010/soapjms/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://LAPTOP-SSGOMGS4/Tasks.v5.api:vFiveApi" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://LAPTOP-SSGOMGS4/Tasks.v5.api:vFiveApi" xmlns:tns="http://LAPTOP-SSGOMGS4/Tasks.v5.api:vFiveApi" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+          <xsd:element name="indexOfChar" type="tns:indexOfChar"/>
+          <xsd:element name="indexOfCharResponse" type="tns:indexOfCharResponse"/>
+          <xsd:element name="lengthOfString" type="tns:lengthOfString"/>
+          <xsd:element name="lengthOfStringResponse" type="tns:lengthOfStringResponse"/>
+          <xsd:element name="removeSpace" type="tns:removeSpace"/>
+          <xsd:element name="removeSpaceResponse" type="tns:removeSpaceResponse"/>
+          <xsd:element name="replaceCommaWithDash" type="tns:replaceCommaWithDash"/>
+          <xsd:element name="replaceCommaWithDashResponse" type="tns:replaceCommaWithDashResponse"/>
+          <xsd:element name="seperateByColon" type="tns:seperateByColon"/>
+          <xsd:element name="seperateByColonResponse" type="tns:seperateByColonResponse"/>
+          <xsd:element name="splitByComma" type="tns:splitByComma"/>
+          <xsd:element name="splitByCommaResponse" type="tns:splitByCommaResponse"/>
+          <xsd:element name="stringConcatToUpper" type="tns:stringConcatToUpper"/>
+          <xsd:element name="stringConcatToUpperResponse" type="tns:stringConcatToUpperResponse"/>
+          <xsd:complexType name="indexOfChar">
+            <xsd:sequence>
+              <xsd:element name="inputString" nillable="true" type="xsd:string"/>
+              <xsd:element name="index" nillable="true" type="xsd:string"/>
+            </xsd:sequence>
+          </xsd:complexType>
+          <xsd:complexType name="indexOfCharResponse">
+            <xsd:sequence>
+              <xsd:element name="Result" nillable="true" type="xsd:string"/>
+            </xsd:sequence>
+          </xsd:complexType>
+          <xsd:complexType name="lengthOfString">
+            <xsd:sequence>
+              <xsd:element name="input" nillable="true" type="xsd:string"/>
+            </xsd:sequence>
+          </xsd:complexType>
+          <xsd:complexType name="lengthOfStringResponse">
+            <xsd:sequence>
+              <xsd:element name="isNumber" nillable="true" type="xsd:string"/>
+              <xsd:element name="isAlphaNumeric" nillable="true" type="xsd:string"/>
+              <xsd:element name="isNullOrWhiteSpace" nillable="true" type="xsd:string"/>
+              <xsd:element name="isDate" nillable="true" type="xsd:string"/>
+            </xsd:sequence>
+          </xsd:complexType>
+          <xsd:complexType name="removeSpace">
+            <xsd:sequence>
+              <xsd:element name="inputString" nillable="true" type="xsd:string"/>
+            </xsd:sequence>
+          </xsd:complexType>
+          <xsd:complexType name="removeSpaceResponse">
+            <xsd:sequence>
+              <xsd:element name="ResultString" nillable="true" type="xsd:string"/>
+            </xsd:sequence>
+          </xsd:complexType>
+          <xsd:complexType name="replaceCommaWithDash">
+            <xsd:sequence>
+              <xsd:element name="inputString" nillable="true" type="xsd:string"/>
+            </xsd:sequence>
+          </xsd:complexType>
+          <xsd:complexType name="replaceCommaWithDashResponse">
+            <xsd:sequence>
+              <xsd:element name="ResultString" nillable="true" type="xsd:string"/>
+            </xsd:sequence>
+          </xsd:complexType>
+          <xsd:complexType name="seperateByColon">
+            <xsd:sequence>
+              <xsd:element maxOccurs="unbounded" name="input" nillable="true" type="xsd:string"/>
+            </xsd:sequence>
+          </xsd:complexType>
+          <xsd:complexType name="seperateByColonResponse">
+            <xsd:sequence>
+              <xsd:element name="result" nillable="true" type="xsd:string"/>
+            </xsd:sequence>
+          </xsd:complexType>
+          <xsd:complexType name="splitByComma">
+            <xsd:sequence>
+              <xsd:element name="inputString" nillable="true" type="xsd:string"/>
+            </xsd:sequence>
+          </xsd:complexType>
+          <xsd:complexType name="splitByCommaResponse">
+            <xsd:sequence>
+              <xsd:element maxOccurs="unbounded" name="ResultList" nillable="true" type="xsd:string"/>
+            </xsd:sequence>
+          </xsd:complexType>
+          <xsd:complexType name="stringConcatToUpper">
+            <xsd:sequence>
+              <xsd:element maxOccurs="unbounded" name="names" nillable="true" type="tns:names"/>
+            </xsd:sequence>
+          </xsd:complexType>
+          <xsd:complexType name="names">
+            <xsd:sequence>
+              <xsd:element name="FirstName" nillable="true" type="xsd:string"/>
+              <xsd:element name="LastName" nillable="true" type="xsd:string"/>
+            </xsd:sequence>
+          </xsd:complexType>
+          <xsd:complexType name="stringConcatToUpperResponse">
+            <xsd:sequence>
+              <xsd:element maxOccurs="unbounded" name="FullName" nillable="true" type="xsd:string"/>
+            </xsd:sequence>
+          </xsd:complexType>
+        	</xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="vFiveApi_PortType_stringConcatToUpperResponse">
+    <wsdl:part name="parameters" element="tns:stringConcatToUpperResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="vFiveApi_PortType_seperateByColonResponse">
+    <wsdl:part name="parameters" element="tns:seperateByColonResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="vFiveApi_PortType_seperateByColon">
+    <wsdl:part name="parameters" element="tns:seperateByColon">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="vFiveApi_PortType_splitByComma">
+    <wsdl:part name="parameters" element="tns:splitByComma">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="vFiveApi_PortType_replaceCommaWithDashResponse">
+    <wsdl:part name="parameters" element="tns:replaceCommaWithDashResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="vFiveApi_PortType_indexOfChar">
+    <wsdl:part name="parameters" element="tns:indexOfChar">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="vFiveApi_PortType_lengthOfString">
+    <wsdl:part name="parameters" element="tns:lengthOfString">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="vFiveApi_PortType_stringConcatToUpper">
+    <wsdl:part name="parameters" element="tns:stringConcatToUpper">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="vFiveApi_PortType_replaceCommaWithDash">
+    <wsdl:part name="parameters" element="tns:replaceCommaWithDash">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="vFiveApi_PortType_removeSpaceResponse">
+    <wsdl:part name="parameters" element="tns:removeSpaceResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="vFiveApi_PortType_lengthOfStringResponse">
+    <wsdl:part name="parameters" element="tns:lengthOfStringResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="vFiveApi_PortType_splitByCommaResponse">
+    <wsdl:part name="parameters" element="tns:splitByCommaResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="vFiveApi_PortType_removeSpace">
+    <wsdl:part name="parameters" element="tns:removeSpace">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="vFiveApi_PortType_indexOfCharResponse">
+    <wsdl:part name="parameters" element="tns:indexOfCharResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="vFiveApi_PortType">
+    <wsdl:operation name="splitByComma">
+      <wsdl:input message="tns:vFiveApi_PortType_splitByComma">
+    </wsdl:input>
+      <wsdl:output message="tns:vFiveApi_PortType_splitByCommaResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="stringConcatToUpper">
+      <wsdl:input message="tns:vFiveApi_PortType_stringConcatToUpper">
+    </wsdl:input>
+      <wsdl:output message="tns:vFiveApi_PortType_stringConcatToUpperResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="replaceCommaWithDash">
+      <wsdl:input message="tns:vFiveApi_PortType_replaceCommaWithDash">
+    </wsdl:input>
+      <wsdl:output message="tns:vFiveApi_PortType_replaceCommaWithDashResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="seperateByColon">
+      <wsdl:input message="tns:vFiveApi_PortType_seperateByColon">
+    </wsdl:input>
+      <wsdl:output message="tns:vFiveApi_PortType_seperateByColonResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="indexOfChar">
+      <wsdl:input message="tns:vFiveApi_PortType_indexOfChar">
+    </wsdl:input>
+      <wsdl:output message="tns:vFiveApi_PortType_indexOfCharResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="removeSpace">
+      <wsdl:input message="tns:vFiveApi_PortType_removeSpace">
+    </wsdl:input>
+      <wsdl:output message="tns:vFiveApi_PortType_removeSpaceResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="lengthOfString">
+      <wsdl:input message="tns:vFiveApi_PortType_lengthOfString">
+    </wsdl:input>
+      <wsdl:output message="tns:vFiveApi_PortType_lengthOfStringResponse">
+    </wsdl:output>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="Tasks_v5_api_vFiveApi_Binder" type="tns:vFiveApi_PortType">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="splitByComma">
+      <soap:operation soapAction="Tasks_v5_api_vFiveApi_Binder_splitByComma" style="document"/>
+      <wsdl:input>
+        <soap:body parts="parameters" use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body parts="parameters" use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="stringConcatToUpper">
+      <soap:operation soapAction="Tasks_v5_api_vFiveApi_Binder_stringConcatToUpper" style="document"/>
+      <wsdl:input>
+        <soap:body parts="parameters" use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body parts="parameters" use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="replaceCommaWithDash">
+      <soap:operation soapAction="Tasks_v5_api_vFiveApi_Binder_replaceCommaWithDash" style="document"/>
+      <wsdl:input>
+        <soap:body parts="parameters" use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body parts="parameters" use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="seperateByColon">
+      <soap:operation soapAction="Tasks_v5_api_vFiveApi_Binder_seperateByColon" style="document"/>
+      <wsdl:input>
+        <soap:body parts="parameters" use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body parts="parameters" use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="indexOfChar">
+      <soap:operation soapAction="Tasks_v5_api_vFiveApi_Binder_indexOfChar" style="document"/>
+      <wsdl:input>
+        <soap:body parts="parameters" use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body parts="parameters" use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="removeSpace">
+      <soap:operation soapAction="Tasks_v5_api_vFiveApi_Binder_removeSpace" style="document"/>
+      <wsdl:input>
+        <soap:body parts="parameters" use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body parts="parameters" use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="lengthOfString">
+      <soap:operation soapAction="Tasks_v5_api_vFiveApi_Binder_lengthOfString" style="document"/>
+      <wsdl:input>
+        <soap:body parts="parameters" use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body parts="parameters" use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Tasks.v5.api.vFiveApi">
+    <wsdl:port name="Tasks_v5_api_vFiveApi_Port" binding="tns:Tasks_v5_api_vFiveApi_Binder">
+      <soap:address location="http://LAPTOP-SSGOMGS4:5555/ws/Tasks.v5.api:vFiveApi/Tasks_v5_api_vFiveApi_Port"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

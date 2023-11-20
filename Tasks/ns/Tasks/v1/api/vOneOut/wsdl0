@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions name="vOneApi" targetNamespace="http://LAPTOP-SSGOMGS4/Tasks.v1.api:vOneApi" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:soapjms="http://www.w3.org/2010/soapjms/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://LAPTOP-SSGOMGS4/Tasks.v1.api:vOneApi" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://LAPTOP-SSGOMGS4/Tasks.v1.api:vOneApi" xmlns:tns="http://LAPTOP-SSGOMGS4/Tasks.v1.api:vOneApi" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+          <xsd:element name="calcApiExceptHandling" type="tns:calcApiExceptHandling"/>
+          <xsd:element name="calcApiExceptHandlingResponse" type="tns:calcApiExceptHandlingResponse"/>
+          <xsd:element name="calcApiWithBranch" type="tns:calcApiWithBranch"/>
+          <xsd:element name="calcApiWithBranchResponse" type="tns:calcApiWithBranchResponse"/>
+          <xsd:element name="calcApiWithLoop" type="tns:calcApiWithLoop"/>
+          <xsd:element name="calcApiWithLoopResponse" type="tns:calcApiWithLoopResponse"/>
+          <xsd:complexType name="calcApiExceptHandling">
+            <xsd:sequence>
+              <xsd:element name="in1" nillable="true" type="xsd:string"/>
+              <xsd:element name="in2" nillable="true" type="xsd:string"/>
+              <xsd:element name="operation" nillable="true" type="xsd:string"/>
+            </xsd:sequence>
+          </xsd:complexType>
+          <xsd:complexType name="calcApiExceptHandlingResponse">
+            <xsd:sequence>
+              <xsd:element name="result" nillable="true" type="xsd:string"/>
+            </xsd:sequence>
+          </xsd:complexType>
+          <xsd:complexType name="calcApiWithBranch">
+            <xsd:sequence>
+              <xsd:element name="in1" nillable="true" type="xsd:string"/>
+              <xsd:element name="in2" nillable="true" type="xsd:string"/>
+              <xsd:element name="operation" nillable="true" type="xsd:string"/>
+            </xsd:sequence>
+          </xsd:complexType>
+          <xsd:complexType name="calcApiWithBranchResponse">
+            <xsd:sequence>
+              <xsd:element name="result" nillable="true" type="xsd:string"/>
+            </xsd:sequence>
+          </xsd:complexType>
+          <xsd:complexType name="calcApiWithLoop">
+            <xsd:sequence>
+              <xsd:element maxOccurs="unbounded" name="input" nillable="true" type="tns:int_input"/>
+            </xsd:sequence>
+          </xsd:complexType>
+          <xsd:complexType name="int_input">
+            <xsd:sequence>
+              <xsd:element name="in1" nillable="true" type="xsd:string"/>
+              <xsd:element name="in2" nillable="true" type="xsd:string"/>
+            </xsd:sequence>
+          </xsd:complexType>
+          <xsd:complexType name="calcApiWithLoopResponse">
+            <xsd:sequence>
+              <xsd:element maxOccurs="unbounded" name="output" nillable="true" type="tns:output"/>
+            </xsd:sequence>
+          </xsd:complexType>
+          <xsd:complexType name="output">
+            <xsd:sequence>
+              <xsd:element name="addition" nillable="true" type="xsd:string"/>
+              <xsd:element name="subtraction" nillable="true" type="xsd:string"/>
+              <xsd:element name="multiplication" nillable="true" type="xsd:string"/>
+              <xsd:element name="division" nillable="true" type="xsd:string"/>
+            </xsd:sequence>
+          </xsd:complexType>
+        	</xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="vOneApi_PortType_calcApiWithBranchResponse">
+    <wsdl:part name="parameters" element="tns:calcApiWithBranchResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="vOneApi_PortType_calcApiExceptHandlingResponse">
+    <wsdl:part name="parameters" element="tns:calcApiExceptHandlingResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="vOneApi_PortType_calcApiWithLoop">
+    <wsdl:part name="parameters" element="tns:calcApiWithLoop">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="vOneApi_PortType_calcApiExceptHandling">
+    <wsdl:part name="parameters" element="tns:calcApiExceptHandling">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="vOneApi_PortType_calcApiWithBranch">
+    <wsdl:part name="parameters" element="tns:calcApiWithBranch">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="vOneApi_PortType_calcApiWithLoopResponse">
+    <wsdl:part name="parameters" element="tns:calcApiWithLoopResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="vOneApi_PortType">
+    <wsdl:operation name="calcApiWithBranch">
+      <wsdl:input message="tns:vOneApi_PortType_calcApiWithBranch">
+    </wsdl:input>
+      <wsdl:output message="tns:vOneApi_PortType_calcApiWithBranchResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="calcApiExceptHandling">
+      <wsdl:input message="tns:vOneApi_PortType_calcApiExceptHandling">
+    </wsdl:input>
+      <wsdl:output message="tns:vOneApi_PortType_calcApiExceptHandlingResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="calcApiWithLoop">
+      <wsdl:input message="tns:vOneApi_PortType_calcApiWithLoop">
+    </wsdl:input>
+      <wsdl:output message="tns:vOneApi_PortType_calcApiWithLoopResponse">
+    </wsdl:output>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="Tasks_v1_api_vOneApi_Binder" type="tns:vOneApi_PortType">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="calcApiWithBranch">
+      <soap:operation soapAction="Tasks_v1_api_vOneApi_Binder_calcApiWithBranch" style="document"/>
+      <wsdl:input>
+        <soap:body parts="parameters" use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body parts="parameters" use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="calcApiExceptHandling">
+      <soap:operation soapAction="Tasks_v1_api_vOneApi_Binder_calcApiExceptHandling" style="document"/>
+      <wsdl:input>
+        <soap:body parts="parameters" use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body parts="parameters" use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="calcApiWithLoop">
+      <soap:operation soapAction="Tasks_v1_api_vOneApi_Binder_calcApiWithLoop" style="document"/>
+      <wsdl:input>
+        <soap:body parts="parameters" use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body parts="parameters" use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Tasks.v1.api.vOneApi">
+    <wsdl:port name="Tasks_v1_api_vOneApi_Port" binding="tns:Tasks_v1_api_vOneApi_Binder">
+      <soap:address location="http://LAPTOP-SSGOMGS4:5555/ws/Tasks.v1.api:vOneApi/Tasks_v1_api_vOneApi_Port"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

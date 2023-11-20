@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Values version="2.0">
+  <record name="record" javaclass="com.wm.util.Values">
+    <value name="node_type">record</value>
+    <value name="node_subtype">unknown</value>
+    <value name="node_nsName">Tasks.v5.api.vFive_.docTypes:docTypeRef_tns_stringConcatToUpper</value>
+    <value name="node_pkg">Tasks</value>
+    <value name="is_public">false</value>
+    <value name="field_type">record</value>
+    <value name="field_dim">0</value>
+    <value name="nillable">true</value>
+    <value name="form_qualified">false</value>
+    <value name="is_global">false</value>
+    <value name="schemaDomain">be9e6f4e040348bc9f9298da3fa9037d</value>
+    <value name="docTypeDomain">9ae7eb30c4ad42189981b4ac21a3b16f</value>
+    <value name="originURI">http://LAPTOP-SSGOMGS4:5555/ws/Tasks.v5.api:vFiveApi?WSDL</value>
+    <array name="rec_fields" type="record" depth="1">
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="node_subtype">unknown</value>
+        <value name="is_public">false</value>
+        <value name="field_name">names</value>
+        <value name="field_type">recref</value>
+        <value name="field_dim">1</value>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+        <value name="is_soap_array_encoding_used">false</value>
+        <value name="rec_closed">true</value>
+        <value name="modifiable">true</value>
+        <value name="rec_ref">Tasks.v5.api.vFive_.docTypes:docTypeRef_tns_names</value>
+      </record>
+    </array>
+    <record name="schemaType" javaclass="com.wm.util.Values">
+      <value name="xmlns">http://LAPTOP-SSGOMGS4/Tasks.v5.api:vFiveApi</value>
+      <value name="ncName">stringConcatToUpper</value>
+    </record>
+    <value name="schemaRegistered">true</value>
+    <value name="modifiable">false</value>
+    <value name="parentWsd">Tasks.v5.api:vFive</value>
+  </record>
+</Values>

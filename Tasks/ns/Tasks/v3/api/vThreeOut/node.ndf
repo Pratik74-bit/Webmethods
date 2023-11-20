@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Values version="2.0">
+  <value name="node_type">webServiceDescriptor</value>
+  <value name="node_subtype">unknown</value>
+  <value name="node_nsName">Tasks.v3.api:vThreeOut</value>
+  <value name="node_pkg">Tasks</value>
+  <value name="is_public">false</value>
+  <Boolean name="inbound">false</Boolean>
+  <Boolean name="WSICompliant">false</Boolean>
+  <value name="SOAPProtocol">SOAP 1.1 Protocol</value>
+  <value name="targetNamespace">http://LAPTOP-SSGOMGS4/Tasks.v3.api:vThreeApi</value>
+  <Boolean name="attachmentEnabled">false</Boolean>
+  <number name="mtomThreshold" type="Integer">0</number>
+  <array name="externalWSDLSources" type="record" depth="1">
+    <record javaclass="com.wm.util.Values">
+      <value name="contextURI">http://localhost:5555/</value>
+      <value name="locationURI">Tasks.v3.api.vThreeOut?wsdl=wsdl0</value>
+      <null name="source"/>
+      <number name="type" type="Integer">1</number>
+    </record>
+  </array>
+  <value name="externalWSDLURL">http://LAPTOP-SSGOMGS4:5555/ws/Tasks.v3.api:vThreeApi?WSDL</value>
+  <value name="WSDLURL">http://LAPTOP-SSGOMGS4:5555/ws/Tasks.v3.api:vThreeOut?WSDL</value>
+  <value name="definitionName">vThreeApi</value>
+  <value name="version">V_10_15</value>
+  <value name="schemaDomain">d467474eeb444a9694c5a0ed83df84dd</value>
+  <Boolean name="rawArray">true</Boolean>
+  <array name="handlerList" type="record" depth="1">
+  </array>
+  <array name="binderList" type="record" depth="1">
+    <record javaclass="com.wm.util.Values">
+      <value name="binderName">Tasks_v3_api_vThreeApi_Binder</value>
+      <value name="portAddress">http://LAPTOP-SSGOMGS4:5555/ws/Tasks.v3.api:vThreeApi/Tasks_v3_api_vThreeApi_Port</value>
+      <value name="bindingName">Tasks_v3_api_vThreeApi_Binder</value>
+      <value name="bindingStyle">document</value>
+      <value name="bindingUse">literal</value>
+      <value name="bindingType">SOAP</value>
+      <value name="portName">Tasks_v3_api_vThreeApi_Port</value>
+      <value name="portTypeName">vThreeApi_PortType</value>
+      <value name="bindingTransport">http://schemas.xmlsoap.org/soap/http</value>
+      <value name="transportType">http</value>
+      <record name="operationMap" javaclass="com.wm.util.Values">
+        <value name="Tasks_v3_api_vThreeApi_Binder_concatWithLoop">concatWithLoop</value>
+        <value name="Tasks_v3_api_vThreeApi_Binder_branchOperation">branchOperation</value>
+      </record>
+      <value name="SOAPProtocol">SOAP 1.1 Protocol</value>
+      <value name="SOAPDirective">ws</value>
+      <Boolean name="useCSQ">false</Boolean>
+    </record>
+  </array>
+  <array name="operationList" type="record" depth="1">
+    <record javaclass="com.wm.util.Values">
+      <value name="operationName">concatWithLoop</value>
+      <value name="serviceName">Tasks.v3.api.vThreeOut_.connectors:vThreeApi_PortType_concatWithLoop</value>
+      <value name="originalMEPType">MEP_URI_IN_OUT</value>
+      <record name="requestElement" javaclass="com.wm.util.Values">
+        <array name="headers" type="record" depth="1">
+        </array>
+        <record name="body" javaclass="com.wm.util.Values">
+          <value name="name">http://LAPTOP-SSGOMGS4/Tasks.v3.api:vThreeApi:vThreeApi_PortType_concatWithLoop_Input</value>
+          <value name="docType">Tasks.v3.api.vThreeOut_.docTypes:vThreeApi_PortType_concatWithLoop_Input</value>
+          <value name="nsOwner">Tasks.v3.api.vThreeOut_.docTypes:vThreeApi_PortType_concatWithLoop_Input</value>
+          <number name="nsOwnerType" type="Integer">3</number>
+          <Boolean name="addedByClient">false</Boolean>
+          <null name="originalDocName"/>
+        </record>
+        <array name="faults" type="record" depth="1">
+        </array>
+      </record>
+      <record name="responseElement" javaclass="com.wm.util.Values">
+        <array name="headers" type="record" depth="1">
+        </array>
+        <record name="body" javaclass="com.wm.util.Values">
+          <value name="name">http://LAPTOP-SSGOMGS4/Tasks.v3.api:vThreeApi:vThreeApi_PortType_concatWithLoop_Output</value>
+          <value name="docType">Tasks.v3.api.vThreeOut_.docTypes:vThreeApi_PortType_concatWithLoop_Output</value>
+          <value name="nsOwner">Tasks.v3.api.vThreeOut_.docTypes:vThreeApi_PortType_concatWithLoop_Output</value>
+          <number name="nsOwnerType" type="Integer">3</number>
+          <Boolean name="addedByClient">false</Boolean>
+          <null name="originalDocName"/>
+        </record>
+        <array name="faults" type="record" depth="1">
+        </array>
+      </record>
+    </record>
+    <record javaclass="com.wm.util.Values">
+      <value name="operationName">branchOperation</value>
+      <value name="serviceName">Tasks.v3.api.vThreeOut_.connectors:vThreeApi_PortType_branchOperation</value>
+      <value name="originalMEPType">MEP_URI_IN_OUT</value>
+      <record name="requestElement" javaclass="com.wm.util.Values">
+        <array name="headers" type="record" depth="1">
+        </array>
+        <record name="body" javaclass="com.wm.util.Values">
+          <value name="name">http://LAPTOP-SSGOMGS4/Tasks.v3.api:vThreeApi:vThreeApi_PortType_branchOperation_Input</value>
+          <value name="docType">Tasks.v3.api.vThreeOut_.docTypes:vThreeApi_PortType_branchOperation_Input</value>
+          <value name="nsOwner">Tasks.v3.api.vThreeOut_.docTypes:vThreeApi_PortType_branchOperation_Input</value>
+          <number name="nsOwnerType" type="Integer">3</number>
+          <Boolean name="addedByClient">false</Boolean>
+          <null name="originalDocName"/>
+        </record>
+        <array name="faults" type="record" depth="1">
+        </array>
+      </record>
+      <record name="responseElement" javaclass="com.wm.util.Values">
+        <array name="headers" type="record" depth="1">
+        </array>
+        <record name="body" javaclass="com.wm.util.Values">
+          <value name="name">http://LAPTOP-SSGOMGS4/Tasks.v3.api:vThreeApi:vThreeApi_PortType_branchOperation_Output</value>
+          <value name="docType">Tasks.v3.api.vThreeOut_.docTypes:vThreeApi_PortType_branchOperation_Output</value>
+          <value name="nsOwner">Tasks.v3.api.vThreeOut_.docTypes:vThreeApi_PortType_branchOperation_Output</value>
+          <number name="nsOwnerType" type="Integer">3</number>
+          <Boolean name="addedByClient">false</Boolean>
+          <null name="originalDocName"/>
+        </record>
+        <array name="faults" type="record" depth="1">
+        </array>
+      </record>
+    </record>
+  </array>
+  <record name="namespaces" javaclass="com.wm.util.Values">
+    <value name="wsdl">http://schemas.xmlsoap.org/wsdl/</value>
+    <value name="soapjms">http://www.w3.org/2010/soapjms/</value>
+    <value name="mime">http://schemas.xmlsoap.org/wsdl/mime/</value>
+    <value name="tns">http://LAPTOP-SSGOMGS4/Tasks.v3.api:vThreeApi</value>
+    <value name="xsd">http://www.w3.org/2001/XMLSchema</value>
+    <value name="http">http://schemas.xmlsoap.org/wsdl/http/</value>
+    <value name="soap12">http://schemas.xmlsoap.org/wsdl/soap12/</value>
+    <value name="soap">http://schemas.xmlsoap.org/wsdl/soap/</value>
+    <value name="soapenc">http://schemas.xmlsoap.org/soap/encoding/</value>
+  </record>
+  <Boolean name="HeadersInPipelineEnabled">false</Boolean>
+  <Boolean name="validateSOAPResponse">true</Boolean>
+  <Boolean name="validateSchemaUsingXerces">true</Boolean>
+  <Boolean name="enableCompatibility">false</Boolean>
+  <Boolean name="omitXSDAny">true</Boolean>
+  <record name="userDefinedURIReferencePrefixes" javaclass="com.wm.util.Values">
+  </record>
+  <Boolean name="registerDoctypes">true</Boolean>
+  <Boolean name="allTypes">false</Boolean>
+  <Boolean name="generateXOPObjectForBase64Binary">false</Boolean>
+  <value name="originURI">http://LAPTOP-SSGOMGS4:5555/ws/Tasks.v3.api:vThreeApi?WSDL</value>
+  <value name="modifiable">false</value>
+  <value name="externalServiceName">{http://LAPTOP-SSGOMGS4/Tasks.v3.api:vThreeApi}Tasks.v3.api.vThreeApi</value>
+  <null name="policyAttachmentList"/>
+  <Boolean name="filterLoginCredentials">false</Boolean>
+</Values>

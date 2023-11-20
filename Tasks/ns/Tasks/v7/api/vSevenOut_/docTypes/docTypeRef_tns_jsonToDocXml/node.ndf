@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Values version="2.0">
+  <record name="record" javaclass="com.wm.util.Values">
+    <value name="node_type">record</value>
+    <value name="node_subtype">unknown</value>
+    <value name="node_nsName">Tasks.v7.api.vSevenOut_.docTypes:docTypeRef_tns_jsonToDocXml</value>
+    <value name="node_pkg">Tasks</value>
+    <value name="is_public">false</value>
+    <value name="field_type">record</value>
+    <value name="field_dim">0</value>
+    <value name="nillable">true</value>
+    <value name="form_qualified">false</value>
+    <value name="is_global">false</value>
+    <value name="schemaDomain">01c7379ec1414477804de78d02553d34</value>
+    <value name="docTypeDomain">28c0e0dc444f450f8e896ace302057d9</value>
+    <value name="originURI">http://LAPTOP-SSGOMGS4:5555/ws/Tasks.v7.api:vSevenApi?WSDL</value>
+    <array name="rec_fields" type="record" depth="1">
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="node_subtype">unknown</value>
+        <value name="is_public">false</value>
+        <value name="field_name">orders</value>
+        <value name="field_type">recref</value>
+        <value name="field_dim">0</value>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+        <value name="rec_closed">true</value>
+        <value name="modifiable">true</value>
+        <value name="rec_ref">Tasks.v7.api.vSevenOut_.docTypes:docTypeRef_tns_orders</value>
+      </record>
+    </array>
+    <record name="schemaType" javaclass="com.wm.util.Values">
+      <value name="xmlns">http://LAPTOP-SSGOMGS4/Tasks.v7.api:vFiveApi</value>
+      <value name="ncName">jsonToDocXml</value>
+    </record>
+    <value name="schemaRegistered">true</value>
+    <value name="modifiable">false</value>
+    <value name="parentWsd">Tasks.v7.api:vSevenOut</value>
+  </record>
+</Values>
